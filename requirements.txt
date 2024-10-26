@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+pydantic
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+fastapi-cors
+pytesseract
+ocrmypdf
+matplotlib
+numpy
+pandas
