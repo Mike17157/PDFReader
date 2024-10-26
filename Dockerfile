@@ -19,7 +19,8 @@ WORKDIR /app
 RUN npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias --use-npm --yes
 
 # Install shadcn-ui and initialize it
-RUN npx shadcn-ui@latest init --yes
+RUN npm install -g @shadcn/ui
+RUN npx shadcn@latest init --yes
 
 # Copy Python requirements and install them
 COPY requirements.txt .
@@ -35,7 +36,7 @@ RUN npm run build
 EXPOSE 8000 3000
 
 # Create a script to run both services
-COPY docker/start.sh .
+COPY start.sh .
 RUN chmod +x ./start.sh
 
 # Command to run the application
